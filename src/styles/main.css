@@ -1,0 +1,31 @@
+:root {
+	--font-family: "system-ui";
+}
+
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	font-family: var(--font-family);
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+
+main {
+	margin-block: 2rem;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.1;
+	text-wrap: balance;
+}
+
+.wrapper {
+	width: min(1280px, 100% - 2rem);
+	margin-inline: auto;
+}
+
+.flow > * + * {
+	margin-top: var(--flow-spacing, 1em);
+}

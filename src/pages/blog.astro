@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import BlogPost from "../components/BlogPost.astro"
+
+const allPosts = await getCollection("posts")
+---
+
+<BaseLayout pageTitle="Blog">
+	<section class="flow" aria-labelledby="blog">
+		<h2 id="blog">Blog</h2>
+		<p>This is where I will post about my journey learning Astro.</p>
+		<ul>
+			{
+				allPosts.map((post) => (
+					<BlogPost url={"/posts/" + post.slug} title={post.data.title}/>
+				))
+			}
+		</ul>
+	</section>
+</BaseLayout>

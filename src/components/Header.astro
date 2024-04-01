@@ -1,0 +1,28 @@
+---
+import Navbar from "./Navbar.astro"
+---
+
+<header class="header">
+	<div class="header__layout">
+		<h1 class="header__logo">Test</h1>
+		<Navbar />
+	</div>
+</header>
+
+<style lang="scss">
+	.header {
+		background-color: blueviolet;
+		padding-block: 1rem;
+		padding-inline: 2rem;
+
+		&__layout {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__logo {
+			color: white;
+		}
+	}
+</style>

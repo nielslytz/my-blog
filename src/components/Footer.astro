@@ -1,0 +1,25 @@
+<footer class="footer content-grid">
+	<div class="footer__layout breakout">
+		<p>&copy; <span id="this-year"></span> My Company</p>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		padding-block: 1rem;
+	}
+
+	.footer__layout {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+</style>
+
+<script>
+	const thisYearElement: HTMLElement | null = document.querySelector("#this-year");
+
+	if (thisYearElement) {
+    thisYearElement.textContent = `${new Date().getFullYear()}`;
+	}
+</script>

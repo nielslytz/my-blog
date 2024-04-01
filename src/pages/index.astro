@@ -1,16 +1,24 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle="Home">
+	<section class="flow" aria-labelledby="title">
+		<h2 id="title">section title</h2>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto corrupti repellat possimus quidem. Aspernatur culpa a doloribus odit magni reprehenderit nostrum debitis officia voluptas nobis nihil eligendi, sit provident.
+		</p>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto corrupti repellat possimus quidem. Aspernatur culpa a doloribus odit magni reprehenderit nostrum debitis officia voluptas nobis nihil eligendi, sit provident.
+		</p>
+	</section>
+	<section class="flow" aria-labelledby="section">
+		<h2 id="section">section title</h2>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto corrupti repellat possimus quidem. Aspernatur culpa a doloribus odit magni reprehenderit nostrum debitis officia voluptas nobis nihil eligendi, sit provident.
+		</p>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto corrupti repellat possimus quidem. Aspernatur culpa a doloribus odit magni reprehenderit nostrum debitis officia voluptas nobis nihil eligendi, sit provident.
+		</p>
+	</section>
+</BaseLayout>

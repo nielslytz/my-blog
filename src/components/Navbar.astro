@@ -1,0 +1,56 @@
+---
+import { navLinks } from "../data/navLinks"
+---
+
+<nav>
+	<ul class="navigation">
+		{
+			navLinks.map(link => (
+				<li>
+					<a class="navigation__link" href={link.url}>{link.title}</a>	
+				</li>
+			))
+		}
+	</ul>
+	<button class="toggle">
+		<p>test</p>
+	</button>
+</nav>
+
+<style lang="scss">
+	nav {
+		display: flex;
+	}
+
+	.navigation {
+		display: flex;
+		list-style: none;
+		gap: 1rem;
+
+		&__link {
+			text-decoration: none;
+
+			&:focus,
+			&:hover {
+				color: white;
+			}
+		}
+	}
+
+	.toggle {
+		margin-left: 1rem;
+		background-color: transparent;
+		border: none;
+		display: none;
+	}
+
+	@media screen and (max-width: 768px) {
+		.navigation {
+			flex-direction: column;
+		}
+
+		.toggle {
+			display: block;
+		}
+	}
+</style>
